@@ -1,61 +1,62 @@
 # Laguna PHO Record Management System
 
-## 🔍 Project Description
+## 📌 Project Title
 
-A web-based record management system designed for the Laguna Provincial Health Office (PHO). It allows administrators and coordinators to manage municipalities, user accounts, and system operations. A local logging system was added to enhance accountability and offline auditing.
+Laguna PHO Record Management System with Local Activity Logging
 
-## 🚀 Features
+## 📝 Short Description
 
-* User authentication with role-based access (Admin and Coordinator)
-* Coordinator account management
-* Municipality data listing and creation
-* Logging of:
+This project is a web-based information system for the Laguna Provincial Health Office (PHO) designed to manage user accounts and municipality data. An automation and security enhancement was added to log all user activities to a local file, allowing offline monitoring of actions for security and transparency.
 
-  * Successful login attempts
-  * Page visits
-  * Account creations
-  * Status updates (active, inactive, locked)
-  * Email notification attempts
+## 🚀 Features Added / Enhanced
 
-## 🛡️ Enhancement Summary
-
-**Feature Added:** Local User Activity Logging
-
-### 🔧 Description of Enhancement
-
-To improve accountability and traceability, a custom-built logging system was added using a `logger.php` file. It automatically tracks all major user actions. Each entry is recorded in `activity_log.txt` with a timestamp, user role, and full name. The feature is 100% offline and does not require any external connection or services.
-
-### 🔄 How It Works
-
-* Each important PHP file includes `logger.php`
-* Actions are logged via `logAction()`
-* Example log: `[2025-05-30 11:13:12] [Admin: LAGUNA PHO ADMIN] Visited: Dashboard`
+* ✅ Local activity logging system (via `logger.php`)
+* ✅ Page visits
+* ✅ Functionality — logs saved in `activity_log.txt`
+* ✅ Coordinator and municipality management
 
 ## 🧰 Technologies Used
 
 * PHP 7.4+
 * MySQL / phpMyAdmin
 * Bootstrap 5
-* JavaScript
-* XAMPP (Local Server)
+* HTML5, CSS3
+* JavaScript (vanilla)
+* XAMPP (Apache + MySQL)
 
-## 🎥 Demo Video
+## 🛠 Installation Instructions
 
-📎 [Click here to view]()
+1. Download and install **XAMPP**.
+2. Copy the `/src/` folder into the `htdocs` directory.
+3. Import `lpho_db.sql` into **phpMyAdmin**.
+4. Run Apache and MySQL using the XAMPP Control Panel.
+5. Open your browser and go to: `http://localhost/src/lagunapho_Security_and_Automation_FINAL_UPDATED`
 
-## 🧪 How to Run
+## ▶️ How to Use / Run the Project
 
-1. Install XAMPP and run Apache + MySQL
-2. Place the `/lagunapho_Security_and_Automation_FINAL_UPDATED/` folder into `htdocs`
-3. Import `lpho_db.sql` in phpMyAdmin
-4. Open `http://localhost/lagunapho_Security_and_Automation_FINAL_UPDATED` in your browser
+* Log in as either **Admin** or **Coordinator**.
+* Admins can:
 
-## 👨‍💻 Developer
+  * Add and manage Coordinator accounts
+  * Add new municipalities
+  * Change account statuses
+* All actions (logins, updates, form submissions) are recorded in `activity_log.txt`.
+
+## 🎥 Demo Video Link
+
+[Watch the demo here]()
+
+## 📁 Folder Structure Description
+
+```
+/lagunapho_Security_and_Automation/
+├── /src/               ← PHP, JS, CSS, assets
+├── /docs/              ← SRS.pdf, TechnicalDoc.pdf
+├── activity_log.txt    ← auto-generated log file
+├── README.md
+```
+
+## 👨‍💻 Contributors
 
 **Ren Cabreza**
 BS Computer Science – LSPU Sta. Cruz
-
-## 📅 Submission Info
-
-**Subject:** CMSC 311 – Software Engineering
-**Date:** May 31, 2025
